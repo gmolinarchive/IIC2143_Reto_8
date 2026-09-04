@@ -1,0 +1,28 @@
+<h1>Most Recent Article</h1>
+
+<% if @article %>
+  <article class="article-card">
+    <h2><%= @article.title %></h2>
+
+    <div class="article-meta">
+      <span><strong>Author:</strong> <%= @article.author.presence || "Unknown" %></span>
+      <span><strong>Category:</strong> <%= @article.category.presence || "Uncategorized" %></span>
+      <span><strong>Published:</strong> <%= @article.created_at.strftime("%d/%m/%Y %H:%M") %></span>
+    </div>
+
+    <p class="article-body"><%= @article.body %></p>
+
+    <div>
+      <%= link_to "View article", article_path(@article), class: "btn primary" %>
+      <%= link_to "Update", edit_article_path(@article), class: "btn secondary" %>
+      <%= link_to "Delete", article_path(@article),
+                  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                  class: "btn danger" %>
+    </div>
+  </article>
+<% else %>
+  <p class="empty-state">There are no articles yet.</p>
+  <%= link_to "New Article", new_article_path, class: "btn primary" %>
+<% end %>
+
+<%= link_to "All articles", articles_path, class: "btn secondary" %>

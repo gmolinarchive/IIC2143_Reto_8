@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-top: 0;
+  color: #111827;
+}
+
+p {
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+th,
+td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  color: #374151;
+  background: #f9fafb;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+form {
+  max-width: 42rem;
+}
+
+form > div {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.25rem 0.35rem 0.25rem 0;
+  padding: 0.6rem 0.9rem;
+  border: 0;
+  border-radius: 0.4rem;
+  color: #ffffff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: #2563eb;
+}
+
+.secondary {
+  background: #4b5563;
+}
+
+.danger {
+  background: #dc2626;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.article-card {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #f9fafb;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+}
+
+.article-card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.article-body {
+  white-space: pre-wrap;
+}
+
+.empty-state {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.5rem;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 2rem 0.75rem;
+  }
+
+  th,
+  td {
+    padding: 0.65rem 0.5rem;
+  }
+}
